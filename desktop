@@ -1,12 +1,12 @@
 
 
   $mod = Get-WmiObject Win32_ComputerSystem | % {$_.Model}
-  Start-Transcript -append -Path ".\belly-tags\$mod -bellytag.txt"
+  Start-Transcript -append -Path ".\info\$mod -info.txt"
  
 
 #out-file E:\bellyTag.txt -encoding UTF8
 Write-Host ' '
-Write-Host "Belly Tagz -- *DeskTop Edition!*" -foregroundcolor green
+Write-Host "Info -- *DeskTop Edition!*" -foregroundcolor green
 Write-Host "---------------------------------" -foregroundcolor green
 
   $ddr = Get-WmiObject Win32_PhysicalMemory | ? SMBIOSMemoryType | % {$_.SMBIOSMemoryType}
@@ -122,6 +122,6 @@ Start-Process "ms-settings:network-status"
 Write-Host "Date is: $date" -foregroundcolor yellow
   
 Stop-Transcript
-Write-Host "~~ Press Enter to exit Powershell ~~" -foregroundcolor green
+Write-Host "~~ Press Enter to exit PowerShell ~~" -foregroundcolor green
 
 pause
