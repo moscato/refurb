@@ -14,7 +14,7 @@ The laptop script will give screen size and open camera for testing if available
 The desktop version foregoes the camera and reports motherboard instead of screen size.
 
 
-<h2>** This script is MIT licensed and should be changed, twisted, and contorted however anyone shall see fit! **</h2>
+<h2><i>This script is MIT licensed and should be changed, twisted, and contorted however anyone shall see fit!</i></h2>
 
 
 It should be noted that while this script is generally dependable and has been implemented for commercial use in the past, it does have some hiccups.
@@ -30,12 +30,12 @@ Problems are as follows.
 - Not sure how to return battery health.<br> 
   Perhaps Win32_BIOS? Win32_Battery exists but does not provide useful results
 
-Script does not play well with multiple drives and will often report drive type incorrectly.
-  This is due to drive info being pulled from the [0] index of Get-PhysicalDisk cmdlet.
+- Script does not play well with multiple drives and will often report drive type incorrectly.
+    This is due to drive info being pulled from the [0] index of Get-PhysicalDisk cmdlet.
   
-Script throws an error on some info on Windows 11 machines where win32 object is no longer available.
+- Script throws an error on some info on Windows 11 machines where win32 object is no longer available.
 
-Does not report WiFi info, instead pulling up Network Status in settings to find this information manually if necessary.
+- Does not report WiFi info, instead pulling up Network Status in settings to find this information manually if necessary.
    
 - Windows 11 is presenting an interesting challenge with calling the 0 index ( [0] ) on line 77. <br>
   Prints an error about indexing to a null array.
@@ -45,6 +45,18 @@ Does not report WiFi info, instead pulling up Network Status in settings to find
 -----------------------------------------------------------------------------------------------------------------------
 CHANGE LOG
 -----------------------------------------------------------------------------------------------------------------------
+    
+  <u>Change-Log 7/31/22</u>
+  
+  Optimized for gov applications.
+  
+  Removed that pesky string Write-Host for internet options in favor of opening Network Status in Tech info.
+  
+  Replaced the term belly-tag with info because professional.
+  
+  removed Activation check entirely.
+  
+  <hr><hr>
   
   <u>Change-Log 8/25/21</u>
   
