@@ -113,11 +113,13 @@ Write-Host "File Explorer Options is open to clear recent history" -foregroundco
 Write-Host "^^explorer is open to prove this +-- Testing purposes --+" -foregroundcolor yellow
 Get-ControlPanelItem -Name "File Explorer Options" | Show-ControlPanelItem
 Start-Process explorer.exe
+Write-Host "Network Status opened for internet information." -foregroundcolor yellow
+Start-Process "ms-settings:network-status"
 
-Start-Process ms-settings:activation
-Write-Host "Windows activation is open" -foregroundcolor yellow
+        #Start-Process ms-settings:activation
+        #Write-Host "Windows activation is open" -foregroundcolor yellow
   $date = Get-Date
-Write-Host "Date is: $date"  -foregroundcolor yellow
+Write-Host "Date is: $date" -foregroundcolor yellow
   
 Stop-Transcript
 Write-Host "~~ Press Enter to exit Powershell ~~" -foregroundcolor green
