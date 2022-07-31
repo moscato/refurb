@@ -1,13 +1,13 @@
 
 
   $mod = Get-WmiObject Win32_ComputerSystem | % {$_.Model}
-  Start-Transcript -append -Path ".\belly-tags\$mod -bellytag.txt"
+  Start-Transcript -append -Path ".\info\$mod -info.txt"
 
-#Start-Transcript -append -Path "D:\$mod -bellytag.txt"
+#Start-Transcript -append -Path "D:\$mod -info.txt"
 
-#out-file E:\bellyTag.txt -encoding UTF8
+#out-file E:\info.txt -encoding UTF8
 Write-Host ' '
-Write-Host "Belly Tagz -- *LapTop Edition!*" -foregroundcolor green
+Write-Host "Info -- *LapTop Edition!*" -foregroundcolor green
 Write-Host "---------------------------------" -foregroundcolor green
 
   $ddr = Get-WmiObject Win32_PhysicalMemory | ? SMBIOSMemoryType | % {$_.SMBIOSMemoryType}
@@ -128,7 +128,8 @@ Write-Host 'Camera is open for testing.' -foregroundcolor yellow
 Write-Host "Date is: $date"  -foregroundcolor yellow
 
 Stop-Transcript
-Write-Host "~~ Press Enter to exit Powershell ~~" -foregroundcolor green
+Write-Host "~~ Press Enter to exit PowerShell ~~" -foregroundcolor green
 
 pause
+
 
