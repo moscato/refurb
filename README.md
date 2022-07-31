@@ -14,7 +14,7 @@ The laptop script will give screen size and open camera for testing if available
 The desktop version foregoes the camera and reports motherboard instead of screen size.
 
 
-<h2><i>This script is MIT licensed and <b>should</b> be changed, twisted, and contorted however anyone shall see fit!</i></h2>
+<h2><i>This script is MIT licensed and <u>should</u> be changed, twisted, and contorted however anyone shall see fit!</i></h2>
 
 
 It should be noted that while this script is generally dependable and has been implemented for commercial use in the past, it does have some hiccups.
