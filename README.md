@@ -30,14 +30,12 @@ Problems are as follows.
 - Not sure how to return battery health.<br> 
   Perhaps Win32_BIOS? Win32_Battery exists but does not provide useful results
 
-- Script does not play well with multiple drives and will often report drive type incorrectly.
+- Script does not play well with multiple drives and will often report drive type incorrectly. <br>
     This is due to drive info being pulled from the [0] index of Get-PhysicalDisk cmdlet.
-  
-- Script throws an error on some info on Windows 11 machines where win32 object is no longer available.
 
 - Does not report WiFi info, instead pulling up Network Status in settings to find this information manually if necessary.
    
-- Windows 11 is presenting an interesting challenge with calling the 0 index ( [0] ) on line 77. <br>
+- Windows 11 is presenting an interesting challenge with calling the [0] index on drive info. <br>
   Prints an error about indexing to a null array.
   
   <hr><hr>
