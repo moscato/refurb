@@ -4,7 +4,7 @@ Refurb manager with system specifics and frequently checked locations.
 
 This script was written to generate inventory tags for a used computer store.
 
-Information generated will be stored and appended to .txt files in the directory from which the script was ran, in a folder named belly-tag.
+Information generated will be stored and appended to .txt files in the directory from which the script was ran, in a folder named info.
   Script will create this directory if it doesn't already exist.
 
 There are two versions, for laptop and desktop.
