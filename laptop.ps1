@@ -98,7 +98,7 @@ Write-Host "Continue for tech info..." -foregroundcolor green
 
 pause
 
-  $exec = Get-ExecutionPolicy
+$exec = Get-ExecutionPolicy
 
 Write-Host 'Tech Info ~~' -foregroundcolor yellow
 Write-Host "---------------------------------" -foregroundcolor yellow
@@ -118,7 +118,7 @@ Start-Process microsoft.windows.camera:
 Write-Host 'Camera is open for testing.' -foregroundcolor yellow
 
 
-  $date = Get-Date
+$date = Get-Date
 Write-Host "Date is: $date"  -foregroundcolor yellow
 
 Stop-Transcript
