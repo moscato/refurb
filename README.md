@@ -14,7 +14,7 @@ The laptop script will give screen size and open camera for testing if available
 The desktop version foregoes the camera and reports motherboard instead of screen size.
 
 
-<h2><i>This script is MIT licensed and should be changed, twisted, and contorted however anyone shall see fit!</i></h2>
+<h2><i>This script is MIT licensed and <b>should</b> be changed, twisted, and contorted however anyone shall see fit!</i></h2>
 
 
 It should be noted that while this script is generally dependable and has been implemented for commercial use in the past, it does have some hiccups.
@@ -34,6 +34,8 @@ Problems are as follows.
     This is due to drive info being pulled from the [0] index of Get-PhysicalDisk cmdlet.
 
 - Does not report WiFi info, instead pulling up Network Status in settings to find this information manually if necessary.
+
+- Added "Microsoft Windows 10 Enterprise" & "Microsoft Windows 11 Enterprise" to OS detection.
    
 - Windows 11 is presenting an interesting challenge with calling the [0] index on drive info. <br>
   Prints an error about indexing to a null array.
