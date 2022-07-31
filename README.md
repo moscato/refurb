@@ -53,6 +53,8 @@ CHANGE LOG
   
   Removed Activation check entirely.
   
+  Set Out-File path to uses Serial Number rather than Model Number.
+  
   <hr><hr>
   
   <u>Change-Log 8/25/21</u>
