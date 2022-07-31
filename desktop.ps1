@@ -1,7 +1,8 @@
 
 
   $mod = Get-WmiObject Win32_ComputerSystem | % {$_.Model}
-  Start-Transcript -append -Path ".\info\$mod -info.txt"
+  $ser = Get-WmiObject Win32_BIOS | ? $_.SerialNumber
+  Start-Transcript -append -Path ".\info\$ser -info.txt"
  
 
 #out-file E:\bellyTag.txt -encoding UTF8
