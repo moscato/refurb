@@ -1,7 +1,7 @@
 
 
   $mod = Get-WmiObject Win32_ComputerSystem | % {$_.Model}
-  $ser = Get-WmiObject Win32_BIOS | ? $_.SerialNumber
+  $ser = Get-WmiObject Win32_BIOS | ? {$_.SerialNumber}
   Start-Transcript -append -Path ".\info\$ser -info.txt"
  
 
