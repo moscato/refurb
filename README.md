@@ -52,7 +52,7 @@ CHANGE LOG
   
   Replaced the term belly-tag with info because professional.
   
-  removed Activation check entirely.
+  Removed Activation check entirely.
   
   <hr><hr>
   
