@@ -4,6 +4,9 @@
   $ser = Get-WmiObject Win32_BIOS | % {$_.SerialNumber}
   Start-Transcript -append -Path ".\info\$ser -info.txt"
 
+#Start-Transcript -append -Path "D:\$mod -info.txt"
+
+#out-file E:\info.txt -encoding UTF8
 Write-Host ' '
 Write-Host "Info -- *LapTop Edition!*" -foregroundcolor green
 Write-Host "---------------------------------" -foregroundcolor green
@@ -31,6 +34,7 @@ Get-WmiObject Win32_ComputerSystem | ? {Write-Host $_.Model}
   
   Write-Host "$($ssFin)`" HD LCD Screen ($($horz) x $($verz))"
   
+				#Get-WmiObject Win32_VideoController | ? {Write-Host ($ssFin)'" HD LCD Screen ('$_.CurrentHorizontalResolution 'x' $_.CurrentVerticalResolution')'}
 
   $cpuName = Get-WmiObject Win32_processor | % {$_.name}
   $cores = Get-WmiObject Win32_processor | % {$_.NumberOfCores}
@@ -38,7 +42,7 @@ Get-WmiObject Win32_ComputerSystem | ? {Write-Host $_.Model}
   
 Write-Host $cpuName.Replace("(R)", "").Replace("(TM)", "").Replace(" CPU", "").Replace("@ ", "@") "($($cores) Cores $($threads) Threads)"
 
-
+				#Get-wmiObject win32_processor | ? {Write-Host $_.name "|" $_.NumberOfCores "Cores" $_.NumberOfLogicalProcessors"Threads"}
 
   $memTotal = Get-WmiObject Win32_physicalMemory | % {($_.capacity/1gb)}
   $memSlots = Get-WmiObject Win32_physicalMemoryArray | % {$_.Memorydevices}
@@ -46,8 +50,9 @@ Write-Host $cpuName.Replace("(R)", "").Replace("(TM)", "").Replace(" CPU", "").R
 
 Write-Host "$($memTotal) GB $($ddr) ($($memFirst) GB x $($memSlots) Slots)"
 
+				#Write-Host Get-WmiObject Win32_PhysicalMemory | ? {Write-Host ($_.capacity/1gb) "GB" $ddr}
 				
-$vc = Get-WmiObject win32_videocontroller | %  {$_.Name}
+  $vc = Get-WmiObject win32_videocontroller | %  {$_.Name}
 
 Write-Host $vc.Replace("(R)", "").Replace("(TM)", "")
 
@@ -73,7 +78,8 @@ Write-Host $vc.Replace("(R)", "").Replace("(TM)", "")
   } else {
 	  Write-Host $stor "GB" $dtFin
   }
-
+  
+		#Write-Host $stor "GB" $dtFin
 
 
   $Vers = Get-Ciminstance Win32_OperatingSystem | % caption
@@ -108,7 +114,8 @@ Start-Process devmgmt.msc
 Write-Host 'Device manager is open' -foregroundcolor yellow
 Write-Host "File Explorer Options is open to clear recent history" -foregroundcolor yellow
 Write-Host "^^explorer is open to prove this +-- Testing purposes --+" -foregroundcolor yellow
-
+            # Start-Process ms-settings:activation
+            # Write-Host "Windows activation is open" -foregroundcolor yellow
 Start-Process explorer.exe
 Write-Host "Network Status opened for internet information." -foregroundcolor yellow
 Start-Process "ms-settings:network-status"
@@ -118,12 +125,11 @@ Start-Process microsoft.windows.camera:
 Write-Host 'Camera is open for testing.' -foregroundcolor yellow
 
 
-$date = Get-Date
+  $date = Get-Date
 Write-Host "Date is: $date"  -foregroundcolor yellow
 
 Stop-Transcript
 Write-Host "~~ Press Enter to exit PowerShell ~~" -foregroundcolor green
 
 pause
-
 
