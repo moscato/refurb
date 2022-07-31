@@ -5,12 +5,11 @@
   Start-Transcript -append -Path ".\info\$ser -info.txt"
  
 
-#out-file E:\bellyTag.txt -encoding UTF8
 Write-Host ' '
 Write-Host "Info -- *DeskTop Edition!*" -foregroundcolor green
 Write-Host "---------------------------------" -foregroundcolor green
 
-  $ddr = Get-WmiObject Win32_PhysicalMemory | ? SMBIOSMemoryType | % {$_.SMBIOSMemoryType}
+$ddr = Get-WmiObject Win32_PhysicalMemory | ? SMBIOSMemoryType | % {$_.SMBIOSMemoryType}
 
 
   if ($ddr -eq 21) {
@@ -28,7 +27,6 @@ Write-Host "---------------------------------" -foregroundcolor green
 Get-WmiObject Win32_ComputerSystem | ? {Write-Host $_.Model}
 Get-WmiObject win32_baseboard | ? {Write-Host $_.Manufacturer $_.Product}
   
-				#Get-WmiObject Win32_VideoController | ? {Write-Host ($ssFin)'" HD LCD Screen ('$_.CurrentHorizontalResolution 'x' $_.CurrentVerticalResolution')'}
 
   $cpuName = Get-WmiObject Win32_processor | % {$_.name}
   $cores = Get-WmiObject Win32_processor | % {$_.NumberOfCores}
@@ -45,9 +43,7 @@ Write-Host $cpuName.Replace("(R)", "").Replace("(TM)", "").Replace(" CPU", "").R
 Write-Host "$($memTotal) GB $($ddr) ($($memFirst) GB x $($memSlots) Slots)"
 
 
-				#Get-WmiObject Win32_PhysicalMemory | ? {Write-Host ($_.capacity/1gb) "GB" $ddr}
-
-  $vc = Get-WmiObject win32_videocontroller | %  {$_.Name}
+$vc = Get-WmiObject win32_videocontroller | %  {$_.Name}
 
 Write-Host $vc.Replace("(R)", "").Replace("(TM)", "")
 
@@ -75,7 +71,6 @@ Write-Host $vc.Replace("(R)", "").Replace("(TM)", "")
 	  Write-Host $stor "GB" $dtFin
   }
   
-		#Write-Host $stor "GB" $dtFin
 
 Write-Host "Gigabit Ethernet"
 
@@ -102,7 +97,7 @@ Write-Host "Continue for tech info..." -foregroundcolor green
 
 pause
 
-  $exec = Get-ExecutionPolicy
+$exec = Get-ExecutionPolicy
 
 Write-Host 'Tech Info ~~' -foregroundcolor yellow
 write-Host "---------------------------------" -foregroundcolor yellow
@@ -117,9 +112,7 @@ Start-Process explorer.exe
 Write-Host "Network Status opened for internet information." -foregroundcolor yellow
 Start-Process "ms-settings:network-status"
 
-        #Start-Process ms-settings:activation
-        #Write-Host "Windows activation is open" -foregroundcolor yellow
-  $date = Get-Date
+$date = Get-Date
 Write-Host "Date is: $date" -foregroundcolor yellow
   
 Stop-Transcript
