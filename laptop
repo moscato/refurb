@@ -80,7 +80,6 @@ Write-Host $vc.Replace("(R)", "").Replace("(TM)", "")
   
 		#Write-Host $stor "GB" $dtFin
 
-Write-Host "Wifi, Gigabit Ethernet"
 
   $Vers = Get-Ciminstance Win32_OperatingSystem | % caption
 
@@ -114,10 +113,13 @@ Start-Process devmgmt.msc
 Write-Host 'Device manager is open' -foregroundcolor yellow
 Write-Host "File Explorer Options is open to clear recent history" -foregroundcolor yellow
 Write-Host "^^explorer is open to prove this +-- Testing purposes --+" -foregroundcolor yellow
-Start-Process ms-settings:activation
+            # Start-Process ms-settings:activation
+            # Write-Host "Windows activation is open" -foregroundcolor yellow
 Start-Process explorer.exe
+Write-Host "Network Status opened for internet information." -foregroundcolor yellow
+Start-Process "ms-settings:network-status"
 Get-ControlPanelItem -Name "File Explorer Options" | Show-ControlPanelItem
-Write-Host "Windows activation is open" -foregroundcolor yellow
+
 Start-Process microsoft.windows.camera:
 Write-Host 'Camera is open for testing.' -foregroundcolor yellow
 
@@ -129,5 +131,4 @@ Stop-Transcript
 Write-Host "~~ Press Enter to exit Powershell ~~" -foregroundcolor green
 
 pause
-
 
