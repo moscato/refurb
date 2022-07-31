@@ -80,10 +80,14 @@ Write-Host "Gigabit Ethernet"
 	Write-Host "Windows 10 Pro"
   } elseif ($Vers -eq "Microsoft Windows 10 Home") {
 	Write-Host "Windows 10 Home"
+  }  elseif ($Vers -eq "Windows 10 Enterprise") {
+	Write-Host "Windows 10 Enterprise"
   }  elseif ($Vers -eq "Microsoft Windows 11 Pro") {
 	Write-Host "Windows 11 Pro"
   }  elseif ($Vers -eq "Microsoft Windows 11 Home") {
 	Write-Host "Windows 11 Home"
+  }  elseif ($Vers -eq "Windows 11 Enterprise") {
+	Write-Host "Windows 11 Enterprise"
   }  else {
 	Write-Host "Windows ~~"
 	Start-Process winver
