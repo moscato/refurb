@@ -38,7 +38,6 @@ Problems are as follows.
 - Windows 11 is presenting an interesting challenge with calling the [0] index on drive info. <br>
   Prints an error about indexing to a null array.
   
-  <hr><hr>
   
 -----------------------------------------------------------------------------------------------------------------------
 CHANGE LOG
