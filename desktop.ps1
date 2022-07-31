@@ -72,7 +72,6 @@ Write-Host $vc.Replace("(R)", "").Replace("(TM)", "")
   }
   
 
-Write-Host "Gigabit Ethernet"
 
   $Vers = Get-Ciminstance Win32_OperatingSystem | % caption
 
