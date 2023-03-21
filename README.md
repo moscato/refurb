@@ -53,7 +53,7 @@ CHANGE LOG
   
   Removed Activation check entirely.
   
-  Set Out-File path to uses Serial Number rather than Model Number.
+  Set Out-File path to use Serial Number rather than Model Number.
   
   <hr><hr>
   
