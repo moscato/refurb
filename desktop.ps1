@@ -109,7 +109,7 @@ Write-Host 'ExecutionPolicy is set to: '$exec  -foregroundcolor yellow
 Start-Process devmgmt.msc
 Write-Host 'Device manager is open' -foregroundcolor yellow
 Write-Host "File Explorer Options is open to clear recent history" -foregroundcolor yellow
-Write-Host "^^explorer is open to prove this +-- Testing purposes --+" -foregroundcolor yellow
+Write-Host "^^ Explorer is open to prove this" -foregroundcolor yellow
 Get-ControlPanelItem -Name "File Explorer Options" | Show-ControlPanelItem
 Start-Process explorer.exe
 Write-Host "Network Status opened for internet information." -foregroundcolor yellow
