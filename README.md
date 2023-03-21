@@ -34,8 +34,6 @@ Problems are as follows.
     This is due to drive info being pulled from the [0] index of Get-PhysicalDisk cmdlet.
 
 - Does not report WiFi info, instead pulling up Network Status in settings to find this information manually if necessary.
-
-- Added "Microsoft Windows 10 Enterprise" & "Microsoft Windows 11 Enterprise" to OS detection.
    
 - Windows 11 is presenting an interesting challenge with calling the [0] index on drive info. <br>
   Prints an error about indexing to a null array.
@@ -72,6 +70,7 @@ CHANGE LOG
   
   Added command to open file explorer to expose script in recent files, and file explorer options to clear it.
   
+  Added "Microsoft Windows 10 Enterprise" & "Microsoft Windows 11 Enterprise" to OS detection.
     
   <hr><hr>
   
